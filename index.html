@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //создание объектов
+        let user = new Object();
+
+        let users = {};
+
+        console.log(users);
+        console.log(user);
+        //
+        let arr = [1, 2, 3];
+        //
+        let users1 = {
+            name: 'John',
+            age: 23,
+        };
+        let key = 'name';
+        //лутший вариант
+        console.log(users1.name);
+        //более безопастно
+        console.log(users1['name']);
+        console.log(users1[key]);
+
+        //
+        
+
+        let user2 = {
+            name: 'John',
+            age: 23,
+        };
+        //заменить значение
+        user2.age = 18;
+        //добавить
+        user2.surname = 'Петров'
+        console.log(user2);
+        //удолить
+        delete user2.surname;
+        console.log(user2);
+
+        //
+
+        let user3 = {
+            name: 'John',
+            age: 23,
+            hobby: {
+                sport:{
+                    football: true,
+                }
+            },
+        };
+        console.log(user3.hobby.sport.football);
+        console.log(user3['hobby']['sport']['football']);
+        //проверяет есть ли этота свойство с ключом
+        console.log('name' in user3);
+
+        /*
+        let arr2 = [1, 2, 3];
+        for (let item of arr2){
+            console.log(item);
+        }
+        */
+
+        for(const key in user3){
+            console.log(key);
+            console.log(`свойство с ключем ${key}содержит ${user3[key]}`);
+        }
+        let user4 = {
+            name: 'John',
+            age: 23,
+            hobby: {
+                    football: true,
+            },
+        };
+        for(let key2 in user4){
+            if(typeof user4[key2] == 'Object'){
+                for(let item in user4[key2]){
+                    console.log(item);
+                }
+            }
+            else{
+                console.log(`свойство с ключем ${key2} содержит ${user4[key2]}`);
+            }
+        }
+    </script>
+</body>
+</html>

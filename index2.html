@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let car = {
+            mark:'',
+            model:'',
+            age:'',
+            speed:'',
+
+            addInfo: function(obj){
+            obj.mark = prompt('производитель');
+            obj.model = prompt('модель');
+            obj.age = prompt('год');
+            obj.speed = prompt('скорость');
+            return obj;
+            }
+        }
+        car = car.addInfo(car);
+        console.log(car);
+
+        let arr1 = [{
+            name:'',
+            age:'',
+            gender:'',
+        },
+        {
+            name:'',
+            age:'',
+            gender:'',
+        },
+        {
+            name:'',
+            age:'',
+            gender:'',
+        },
+        {
+            name:'',
+            age:'',
+            gender:'',
+        },
+        {
+            name:'',
+            age:'',
+            gender:'',
+        }];
+        function addf(n){
+            for(const key in arr1 ){
+                n.name = prompt('имя');
+                n.gender = prompt('пол');
+            }
+           for(let key2 in mas){
+            if (n.gender == 'ж');
+           }
+        }
+     
+       arr1 = arr1.addf
+
+
+    </script>
+</body>
+</html>
